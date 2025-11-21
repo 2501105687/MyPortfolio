@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#expertise">My Expertise</a></li>
+        <li><a href="#work">My Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>RIEZEL KIM</h1>
+        <p>BSIT 1A Student</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="grid-2">
+        <div>
+            <p>
+                Hi! I’m Riezel Dawonlay, a Bachelor of science in Information Technology student who’s genuinely
+                 passionate about learning how things work behind the screen. I enjoy exploring programming,
+                  building simple projects, and understanding the logic that makes systems come alive.
+                   Whether it’s writing code, editing photos, or figuring out how to improve something, 
+                   I like approaching tasks with patience, clarity, and curiosity.
+            </p>
+
+            <p> I’m the kind of person who works best when everything is structured and clear. 
+                I love breaking things down into steps, learning at my own pace, and making sure I really understand
+                 a concept before moving on. Over time, this has helped me grow into someone who is detail-oriented,
+                  adaptable, and willing to keep trying until I get things right.
+</p>
+
+<p>As I continue building my skills in IT, I hope to gain more confidence, strengthen my technical foundations,
+     and eventually contribute to projects that challenge me and help me grow. I’m still exploring where I want to specialize,
+      but I’m excited about the journey and the opportunities ahead.
+</p>
+        </div>
+        <div>
+            <img class="grid-img" src="images/bout.jpg" alt="About Me" />
+        </div>
+    </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise" class="alt-bg">
+    <h2>My Expertise</h2>
+    <div class="grid-2">
+        <div>
+            <div class="skill"><p>PHOTO EDITING <span>80%</span></p><div class="skill-bar"><div class="skill-fill"></div></div></div>
+            <div class="skill"><p>C LANGUAGE <span>70%</span></p><div class="skill-bar"><div class="skill-fill"></div></div></div>
+            <div class="skill"><p>HTML & CSS <span>50%</span></p><div class="skill-bar"><div class="skill-fill"></div></div></div>
+        </div>
+        <div>
+            <img class="grid-img" src="images/expertise.jpg" alt="Expertise Image" />
+        </div>
+    </div>
+</section>
+
+<!-- WORK -->
+<!-- WORK -->
+<section id="work">
+    <h2>My Work</h2>
+    <p>Here are some projects I have completed:</p>
+
+    <p><strong>Activity: Photo Editing</strong><br>These are some of my edits during the first semester of
+         my journey being a Bachelor of Science in Information Technology student.</p>
+    <div class="gallery">
+        <!-- Activity 1: 3 images -->
+        <div class="activity-1">
+            <img src="images/work1.jpg" alt="Photo 1">
+            <img src="images/work2.jpg" alt="Photo 2">
+            <img src="images/work3.jpg" alt="Photo 3">
+        </div>
+    </div>
+
+    <p><strong>Activity: C Language Programming</strong><br>These are some of my program activity using 
+        C language during the first semester of my journey being a 
+        Bachelor of Science in Information Technology student.</p>
+    <div class="gallery">
+        <!-- Activity 2: 3 images -->
+        <div class="activity-2">
+            <img src="images/work4.jpg" alt="Photo 1">
+            <img src="images/work5.jpg" alt="Photo 2">
+            <img src="images/work6.jpg" alt="Photo 3">
+        </div>
+    </div>
+
+    <p><strong>Activity: Website Design</strong><br>These are some of my sample website work with HTML,
+         CSS, and basic design elements during the first semester of my journey being a
+          Bachelor of Science in Information Technology student.</p>
+    <div class="gallery">
+        <!-- Activity 3: 3 images in custom grid -->
+        <div class="work-grid">
+            <img src="images/work7.jpeg" alt="Photo 1" class="span-row">
+            <img src="images/work8.jpeg" alt="Photo 2">
+            <img src="images/work9.jpeg" alt="Photo 3">
+        </div>
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact-footer">
+    <div class="big-text top-right">
+        <div>And</div>
+        <div>that's</div>
+    </div>
+
+    <div class="big-text bottom-left">
+        <div> a wrap</div>
+    </div>
+
+    <div class="contact-center">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:riezelkimdawonlay@gmail.com">riezelkimdawonlay@gmail.com</a></p>
+    <p>Mobile Number: <a href="tel:09120803755">09120803755</a></p>
+    <p>
+        Facebook: <a href="https://www.facebook.com/riezel.dwnly" target="_blank" class="contact-link">Riezel Dawonlay</a> | 
+        GitHub: <a href="https://github.com/2501105687" target="_blank" class="contact-link">2501105687</a>
+    </p>
+</div>
+
+</section>
+
+<!-- SKILL ANIMATION -->
+<script>
+window.addEventListener('scroll', function() {
+    const target = document.querySelector('#expertise');
+    const trigger = target.offsetTop - window.innerHeight + 200;
+
+    if (window.scrollY > trigger) {
+        const fills = document.querySelectorAll('.skill-fill');
+        const widths = [80, 60, 50];
+        fills.forEach((fill, i) => fill.style.width = widths[i] + '%');
+    }
+});
+</script>
+
+</body>
+</html>

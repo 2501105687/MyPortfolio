@@ -1,0 +1,284 @@
+/* --------------------- GLOBAL --------------------- */
+body {
+    margin: 0;
+    font-family: "Helvetica", sans-serif;
+    background-color: #f2e9e4;
+    color: #2a2a2a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 100%;
+    padding: 60px 10%;
+    box-sizing: border-box;
+}
+
+/* --------------------- NAVIGATION --------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.85);
+    z-index: 100;
+    padding: 12px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #2a2a2a;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #d37ba3;
+}
+
+/* --------------------- HEADER / HERO --------------------- */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url('images/first.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #f4a9c4;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+/* --------------------- HEADINGS --------------------- */
+h2 {
+    font-size: 4rem;
+    color: #d37ba3;
+    margin-bottom: 20px;
+}
+
+/* --------------------- GRID 2 (ABOUT / EXPERTISE) --------------------- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.grid-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* --------------------- PHOTO GALLERY / WORK --------------------- */
+.gallery {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+/* Activity 1: 3 images */
+.activity-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.activity-1 img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Activity 2: 3 images */
+.activity-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.activity-2 img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Activity 3: Custom grid (photo 1 spans 2 rows) */
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px; /* adjust height as needed */
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.work-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* prevents cropping */
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2; /* optional: show background behind empty space */
+}
+
+.span-row {
+    grid-row: span 2; /* first image spans two rows */
+}
+
+/* Activity labels */
+.activity-label {
+    margin-top: 10px;
+    font-weight: 800;
+    color: #d37ba3;
+}
+
+
+/* --------------------- ALTERNATE BACKGROUND --------------------- */
+.alt-bg {
+    background: #f7f3ef;
+}
+
+/* --------------------- FOOTER --------------------- */
+.contact-footer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('images/foot.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-center {
+    text-align: center;
+    z-index: 2;
+}
+
+.big-text {
+    position: absolute;
+    font-size: 7rem;
+    font-weight: 800;
+    color: #d37ba3;
+    line-height: 0.9;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+/* --------------------- SKILLS --------------------- */
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: #f4a9c4;
+    width: 0;
+    transition: width 2s ease-in-out;
+}
+
+/* --------------------- RESPONSIVE --------------------- */
+@media (max-width: 900px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .activity-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .activity-1, .activity-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .big-text {
+        font-size: 4rem;
+    }
+}
+
+
