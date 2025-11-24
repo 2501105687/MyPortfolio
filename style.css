@@ -86,14 +86,14 @@ section {
     margin-top: 10px;
 }
 
-/* --------------------- HEADINGS --------------------- */
+/* HEADINGS */
 h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #d37ba3;
     margin-bottom: 20px;
 }
 
-/* --------------------- GRID 2 (ABOUT / EXPERTISE) --------------------- */
+/*  GRID 2 (ABOUT / EXPERTISE)  */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
